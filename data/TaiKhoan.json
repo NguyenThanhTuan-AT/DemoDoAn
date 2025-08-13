@@ -1,12 +1,12 @@
 [
     {
-        "tenDangNhap": "user1",
-        "matKhau": "pass1",
+        "tenDangNhap": "admin",
+        "matKhau": "1",
         "loaiTaiKhoan": "admin"
     },
     {
-        "tenDangNhap": "user2",
-        "matKhau": "pass2",
+        "tenDangNhap": "user",
+        "matKhau": "1",
         "loaiTaiKhoan": "user"
     },
     {

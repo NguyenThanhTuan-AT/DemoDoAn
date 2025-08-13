@@ -5,8 +5,18 @@
         <group>
             <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/test/TestDocTatCa.java</file>
             <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/model/QuanLyChung.java</file>
-            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/util/FileIOUtil.java</file>
-            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/util/LocalDateTimeAdapter.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/HangHangKhongFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/HanhKhachFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/LoginFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/UserFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/TaiKhoanFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/AdminFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/ChuyenBayFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/model/TaiKhoan.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/model/ChuyenBay.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/model/VeMayBay.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/VeFrame.java</file>
+            <file>file:/D:/Code%20Java_NetBean/Do_an_1/src/view/MayBayFrame.java</file>
         </group>
     </open-files>
 </project-private>

@@ -47,6 +47,12 @@ public class QuanLyChung {
                 .collect(Collectors.toList());
     }
 
+    public List<ChuyenBay> locChuyenBayTheoHang(String maHang) {
+        return danhSachChuyenBay.stream()
+                .filter(cb -> cb.getMayBay() != null && maHang.equals(cb.getMayBay().getMaHang()))
+                .collect(Collectors.toList());
+    }
+
     // === Quản lý vé ===
     public void themVe(VeMayBay ve) {
         danhSachVe.add(ve);
@@ -75,6 +81,18 @@ public class QuanLyChung {
                 .sum();
     }
 
+    public double thongKeDoanhThuTheoHang(String maHang, int thang, int nam) {
+        return danhSachVe.stream()
+                .filter(ve -> ve.getChuyenBay() != null
+                && ve.getChuyenBay().getMayBay() != null
+                && maHang.equals(ve.getChuyenBay().getMayBay().getMaHang())
+                && ve.getChuyenBay().getThoiGianDi() != null
+                && ve.getChuyenBay().getThoiGianDi().getMonthValue() == thang
+                && ve.getChuyenBay().getThoiGianDi().getYear() == nam)
+                .mapToDouble(VeMayBay::getGiaVe)
+                .sum();
+    }
+
     // === Quản lý hành khách ===
     public void themHanhKhach(HanhKhach hk) {
         danhSachHanhKhach.add(hk);
@@ -87,6 +105,14 @@ public class QuanLyChung {
             }
         }
         return null;
+    }
+
+    public List<HanhKhach> locHanhKhachTheoChuyenBay(String soHieu) {
+        return danhSachHanhKhach.stream()
+                .filter(hk -> hk.getVe() != null
+                && hk.getVe().getChuyenBay() != null
+                && soHieu.equals(hk.getVe().getChuyenBay().getSoHieuChuyenBay()))
+                .collect(Collectors.toList());
     }
 
     // === Quản lý hãng hàng không ===
@@ -136,7 +162,31 @@ public class QuanLyChung {
         return tk != null && tk.getMatKhau().equals(matKhau);
     }
 
-    // === Hiển thị toàn bộ hệ thống ===
+    // === Getter methods ===
+    public List<ChuyenBay> getDanhSachChuyenBay() {
+        return danhSachChuyenBay;
+    }
+
+    public List<VeMayBay> getDanhSachVe() {
+        return danhSachVe;
+    }
+
+    public List<HanhKhach> getDanhSachHanhKhach() {
+        return danhSachHanhKhach;
+    }
+
+    public List<HangHangKhong> getDanhSachHang() {
+        return danhSachHang;
+    }
+
+    public List<MayBay> getDanhSachMayBay() {
+        return danhSachMayBay;
+    }
+
+    public List<TaiKhoan> getDanhSachTaiKhoan() {
+        return danhSachTaiKhoan;
+    }
+
     @Override
     public String toString() {
         return "QuanLyHeThongDatVe{"
