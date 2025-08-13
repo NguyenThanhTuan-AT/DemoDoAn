@@ -1,21 +1,21 @@
-package view;
+package view_code;
 
 import java.awt.*;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import model.HangHangKhong;
+import model.MayBay;
 import model.QuanLyChung;
 
-public class HangHangKhongFrame extends JFrame {
+public class MayBayFrame extends JFrame {
 
     private QuanLyChung qlc;
     private JTable table;
     private DefaultTableModel model;
 
-    public HangHangKhongFrame(QuanLyChung qlc) {
+    public MayBayFrame(QuanLyChung qlc) {
         this.qlc = qlc;
-        setTitle("Quản lý hãng hàng không");
+        setTitle("Quản lý máy bay");
         setSize(600, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -24,7 +24,7 @@ public class HangHangKhongFrame extends JFrame {
     }
 
     private void initUI() {
-        model = new DefaultTableModel(new Object[]{"Mã hãng", "Tên hãng", "Số lượng máy bay"}, 0);
+        model = new DefaultTableModel(new Object[]{"Số hiệu máy bay", "Mã hãng"}, 0);
         table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
 
@@ -42,41 +42,40 @@ public class HangHangKhongFrame extends JFrame {
         add(scrollPane, BorderLayout.CENTER);
         add(btnPanel, BorderLayout.SOUTH);
 
-        btnThem.addActionListener(e -> themHang());
-        btnXoa.addActionListener(e -> xoaHang());
-        btnGhi.addActionListener(e -> HangHangKhong.ghiVaoFile("hang.txt", qlc.getDanhSachHang()));
+        btnThem.addActionListener(e -> themMayBay());
+        btnXoa.addActionListener(e -> xoaMayBay());
+        btnGhi.addActionListener(e -> MayBay.ghiVaoFile("maybay.txt", qlc.getDanhSachMayBay()));
         btnDoc.addActionListener(e -> {
-            List<HangHangKhong> ds = HangHangKhong.docTuFile("hang.txt");
-            qlc.getDanhSachHang().clear();
-            qlc.getDanhSachHang().addAll(ds);
+            List<MayBay> ds = MayBay.docTuFile("maybay.txt");
+            qlc.getDanhSachMayBay().clear();
+            qlc.getDanhSachMayBay().addAll(ds);
             loadData();
         });
     }
 
     private void loadData() {
         model.setRowCount(0);
-        for (HangHangKhong hhk : qlc.getDanhSachHang()) {
+        for (MayBay mb : qlc.getDanhSachMayBay()) {
             model.addRow(new Object[]{
-                hhk.getMaHang(),
-                hhk.getTenHang(),
-                hhk.getDanhSachMayBay().size()
+                mb.getSoHieuMayBay(),
+                mb.getMaHang()
             });
         }
     }
 
-    private void themHang() {
-        String ma = JOptionPane.showInputDialog("Mã hãng:");
-        String ten = JOptionPane.showInputDialog("Tên hãng:");
-        HangHangKhong hhk = new HangHangKhong(ma, ten);
-        qlc.themHang(hhk);
+    private void themMayBay() {
+        String soHieu = JOptionPane.showInputDialog("Số hiệu máy bay:");
+        String maHang = JOptionPane.showInputDialog("Mã hãng hàng không:");
+        MayBay mb = new MayBay(soHieu, maHang);
+        qlc.themMayBay(mb);
         loadData();
     }
 
-    private void xoaHang() {
+    private void xoaMayBay() {
         int row = table.getSelectedRow();
         if (row >= 0) {
-            String ma = (String) model.getValueAt(row, 0);
-            qlc.getDanhSachHang().removeIf(h -> h.getMaHang().equals(ma));
+            String soHieu = (String) model.getValueAt(row, 0);
+            qlc.getDanhSachMayBay().removeIf(mb -> mb.getSoHieuMayBay().equals(soHieu));
             loadData();
         }
     }

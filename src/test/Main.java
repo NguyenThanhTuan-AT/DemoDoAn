@@ -7,7 +7,7 @@ import model.MayBay;
 import model.QuanLyChung;
 import model.TaiKhoan;
 import model.VeMayBay;
-import view.LoginFrame;
+import view_code.LoginFrame;
 
 public class Main {
 
