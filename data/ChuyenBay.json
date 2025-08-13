@@ -1,0 +1,142 @@
+[
+    {
+        "soHieuChuyenBay": "CB001",
+        "mayBay": {
+            "soHieuMayBay": "MB002",
+            "maHang": "HHK2"
+        },
+        "diemDi": "TP2",
+        "diemDen": "TP3",
+        "thoiGianDi": "2025-08-13 14:08",
+        "thoiGianDen": "2025-08-13 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 107
+    },
+    {
+        "soHieuChuyenBay": "CB002",
+        "mayBay": {
+            "soHieuMayBay": "MB003",
+            "maHang": "HHK3"
+        },
+        "diemDi": "TP3",
+        "diemDen": "TP4",
+        "thoiGianDi": "2025-08-14 14:08",
+        "thoiGianDen": "2025-08-14 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 44
+    },
+    {
+        "soHieuChuyenBay": "CB003",
+        "mayBay": {
+            "soHieuMayBay": "MB004",
+            "maHang": "HHK1"
+        },
+        "diemDi": "TP4",
+        "diemDen": "TP5",
+        "thoiGianDi": "2025-08-15 14:08",
+        "thoiGianDen": "2025-08-15 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 9
+    },
+    {
+        "soHieuChuyenBay": "CB004",
+        "mayBay": {
+            "soHieuMayBay": "MB005",
+            "maHang": "HHK2"
+        },
+        "diemDi": "TP5",
+        "diemDen": "TP1",
+        "thoiGianDi": "2025-08-16 14:08",
+        "thoiGianDen": "2025-08-16 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 2
+    },
+    {
+        "soHieuChuyenBay": "CB005",
+        "mayBay": {
+            "soHieuMayBay": "MB006",
+            "maHang": "HHK3"
+        },
+        "diemDi": "TP1",
+        "diemDen": "TP2",
+        "thoiGianDi": "2025-08-17 14:08",
+        "thoiGianDen": "2025-08-17 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 108
+    },
+    {
+        "soHieuChuyenBay": "CB006",
+        "mayBay": {
+            "soHieuMayBay": "MB007",
+            "maHang": "HHK1"
+        },
+        "diemDi": "TP2",
+        "diemDen": "TP3",
+        "thoiGianDi": "2025-08-18 14:08",
+        "thoiGianDen": "2025-08-18 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 48
+    },
+    {
+        "soHieuChuyenBay": "CB007",
+        "mayBay": {
+            "soHieuMayBay": "MB008",
+            "maHang": "HHK2"
+        },
+        "diemDi": "TP3",
+        "diemDen": "TP4",
+        "thoiGianDi": "2025-08-19 14:08",
+        "thoiGianDen": "2025-08-19 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 35
+    },
+    {
+        "soHieuChuyenBay": "CB008",
+        "mayBay": {
+            "soHieuMayBay": "MB009",
+            "maHang": "HHK3"
+        },
+        "diemDi": "TP4",
+        "diemDen": "TP5",
+        "thoiGianDi": "2025-08-20 14:08",
+        "thoiGianDen": "2025-08-20 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 90
+    },
+    {
+        "soHieuChuyenBay": "CB009",
+        "mayBay": {
+            "soHieuMayBay": "MB010",
+            "maHang": "HHK1"
+        },
+        "diemDi": "TP5",
+        "diemDen": "TP1",
+        "thoiGianDi": "2025-08-21 14:08",
+        "thoiGianDen": "2025-08-21 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 88
+    },
+    {
+        "soHieuChuyenBay": "CB010",
+        "mayBay": {
+            "soHieuMayBay": "MB001",
+            "maHang": "HHK2"
+        },
+        "diemDi": "TP1",
+        "diemDen": "TP2",
+        "thoiGianDi": "2025-08-22 14:08",
+        "thoiGianDen": "2025-08-22 16:08",
+        "soThuongGia": 20,
+        "soPhoThong": 100,
+        "soVeDaBan": 114
+    }
+]

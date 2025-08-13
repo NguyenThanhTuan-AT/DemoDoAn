@@ -1,0 +1,82 @@
+[
+    {
+        "maVe": "VE001",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB002"
+        },
+        "hangVe": "Phổ thông",
+        "giaVe": 1600000.0
+    },
+    {
+        "maVe": "VE002",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB003"
+        },
+        "hangVe": "Thương gia",
+        "giaVe": 1700000.0
+    },
+    {
+        "maVe": "VE003",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB004"
+        },
+        "hangVe": "Phổ thông",
+        "giaVe": 1800000.0
+    },
+    {
+        "maVe": "VE004",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB005"
+        },
+        "hangVe": "Thương gia",
+        "giaVe": 1900000.0
+    },
+    {
+        "maVe": "VE005",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB006"
+        },
+        "hangVe": "Phổ thông",
+        "giaVe": 2000000.0
+    },
+    {
+        "maVe": "VE006",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB007"
+        },
+        "hangVe": "Thương gia",
+        "giaVe": 2100000.0
+    },
+    {
+        "maVe": "VE007",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB008"
+        },
+        "hangVe": "Phổ thông",
+        "giaVe": 2200000.0
+    },
+    {
+        "maVe": "VE008",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB009"
+        },
+        "hangVe": "Thương gia",
+        "giaVe": 2300000.0
+    },
+    {
+        "maVe": "VE009",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB010"
+        },
+        "hangVe": "Phổ thông",
+        "giaVe": 2400000.0
+    },
+    {
+        "maVe": "VE010",
+        "chuyenBay": {
+            "soHieuChuyenBay": "CB001"
+        },
+        "hangVe": "Thương gia",
+        "giaVe": 2500000.0
+    }
+]

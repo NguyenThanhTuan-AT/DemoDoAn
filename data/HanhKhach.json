@@ -1,0 +1,72 @@
+[
+    {
+        "cccd": "01234567801",
+        "hoTen": "Hành Khách 1",
+        "ve": {
+            "maVe": "VE001"
+        }
+    },
+    {
+        "cccd": "01234567802",
+        "hoTen": "Hành Khách 2",
+        "ve": {
+            "maVe": "VE002"
+        }
+    },
+    {
+        "cccd": "01234567803",
+        "hoTen": "Hành Khách 3",
+        "ve": {
+            "maVe": "VE003"
+        }
+    },
+    {
+        "cccd": "01234567804",
+        "hoTen": "Hành Khách 4",
+        "ve": {
+            "maVe": "VE004"
+        }
+    },
+    {
+        "cccd": "01234567805",
+        "hoTen": "Hành Khách 5",
+        "ve": {
+            "maVe": "VE005"
+        }
+    },
+    {
+        "cccd": "01234567806",
+        "hoTen": "Hành Khách 6",
+        "ve": {
+            "maVe": "VE006"
+        }
+    },
+    {
+        "cccd": "01234567807",
+        "hoTen": "Hành Khách 7",
+        "ve": {
+            "maVe": "VE007"
+        }
+    },
+    {
+        "cccd": "01234567808",
+        "hoTen": "Hành Khách 8",
+        "ve": {
+            "maVe": "VE008"
+        }
+    },
+    {
+        "cccd": "01234567809",
+        "hoTen": "Hành Khách 9",
+        "ve": {
+            "maVe": "VE009"
+        }
+    },
+    {
+        "cccd": "01234567810",
+        "hoTen": "Hành Khách 10",
+        "ve": {
+            "maVe": "VE010"
+        }
+    }
+]

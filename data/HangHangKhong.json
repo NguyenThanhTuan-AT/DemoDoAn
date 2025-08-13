@@ -1,0 +1,182 @@
+[
+    {
+        "maHang": "HHK1",
+        "tenHang": "Hãng Hàng Không 1",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB001",
+                "maHang": "HHK1"
+            },
+            {
+                "soHieuMayBay": "MB002",
+                "maHang": "HHK1"
+            },
+            {
+                "soHieuMayBay": "MB003",
+                "maHang": "HHK1"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK2",
+        "tenHang": "Hãng Hàng Không 2",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB002",
+                "maHang": "HHK2"
+            },
+            {
+                "soHieuMayBay": "MB003",
+                "maHang": "HHK2"
+            },
+            {
+                "soHieuMayBay": "MB004",
+                "maHang": "HHK2"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK3",
+        "tenHang": "Hãng Hàng Không 3",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB003",
+                "maHang": "HHK3"
+            },
+            {
+                "soHieuMayBay": "MB004",
+                "maHang": "HHK3"
+            },
+            {
+                "soHieuMayBay": "MB005",
+                "maHang": "HHK3"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK4",
+        "tenHang": "Hãng Hàng Không 4",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB004",
+                "maHang": "HHK4"
+            },
+            {
+                "soHieuMayBay": "MB005",
+                "maHang": "HHK4"
+            },
+            {
+                "soHieuMayBay": "MB006",
+                "maHang": "HHK4"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK5",
+        "tenHang": "Hãng Hàng Không 5",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB005",
+                "maHang": "HHK5"
+            },
+            {
+                "soHieuMayBay": "MB006",
+                "maHang": "HHK5"
+            },
+            {
+                "soHieuMayBay": "MB007",
+                "maHang": "HHK5"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK6",
+        "tenHang": "Hãng Hàng Không 6",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB006",
+                "maHang": "HHK6"
+            },
+            {
+                "soHieuMayBay": "MB007",
+                "maHang": "HHK6"
+            },
+            {
+                "soHieuMayBay": "MB008",
+                "maHang": "HHK6"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK7",
+        "tenHang": "Hãng Hàng Không 7",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB007",
+                "maHang": "HHK7"
+            },
+            {
+                "soHieuMayBay": "MB008",
+                "maHang": "HHK7"
+            },
+            {
+                "soHieuMayBay": "MB009",
+                "maHang": "HHK7"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK8",
+        "tenHang": "Hãng Hàng Không 8",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB008",
+                "maHang": "HHK8"
+            },
+            {
+                "soHieuMayBay": "MB009",
+                "maHang": "HHK8"
+            },
+            {
+                "soHieuMayBay": "MB010",
+                "maHang": "HHK8"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK9",
+        "tenHang": "Hãng Hàng Không 9",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB009",
+                "maHang": "HHK9"
+            },
+            {
+                "soHieuMayBay": "MB010",
+                "maHang": "HHK9"
+            },
+            {
+                "soHieuMayBay": "MB011",
+                "maHang": "HHK9"
+            }
+        ]
+    },
+    {
+        "maHang": "HHK10",
+        "tenHang": "Hãng Hàng Không 10",
+        "danhSachMayBay": [
+            {
+                "soHieuMayBay": "MB010",
+                "maHang": "HHK10"
+            },
+            {
+                "soHieuMayBay": "MB011",
+                "maHang": "HHK10"
+            },
+            {
+                "soHieuMayBay": "MB012",
+                "maHang": "HHK10"
+            }
+        ]
+    }
+]
