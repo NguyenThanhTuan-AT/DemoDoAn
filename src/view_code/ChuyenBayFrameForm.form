@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents/>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_AddingCode" type="java.lang.String" value="add(jScrollPane1, java.awt.BorderLayout.CENTER);"/>
+      </AuxValues>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="tableChuyenBay">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="9" rowCount="0">
+                <Column editable="true" title="Số hiệu" type="java.lang.Object"/>
+                <Column editable="true" title="Máy bay" type="java.lang.Object"/>
+                <Column editable="true" title="Điểm đi" type="java.lang.Object"/>
+                <Column editable="true" title="Điểm đến" type="java.lang.Object"/>
+                <Column editable="true" title="Giờ đi" type="java.lang.Object"/>
+                <Column editable="true" title="Giờ đến" type="java.lang.Object"/>
+                <Column editable="true" title="TG" type="java.lang.Object"/>
+                <Column editable="true" title="PT" type="java.lang.Object"/>
+                <Column editable="true" title="Đã bán" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_AddingCode" type="java.lang.String" value="add(jPanel1, java.awt.BorderLayout.SOUTH);"/>
+      </AuxValues>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="btnThem">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thêm"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnXoa">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Xóa"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnGhi">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ghi file"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnDoc">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Đọc file"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
+
