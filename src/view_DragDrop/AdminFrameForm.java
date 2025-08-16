@@ -2,13 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view_code;
+package view_DragDrop;
 
 /**
  *
  * @author Admin
  */
-
 public class AdminFrameForm extends javax.swing.JFrame {
 
     public AdminFrameForm() {
@@ -33,7 +32,8 @@ public class AdminFrameForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quản trị hệ thống - Admin");
         setResizable(false);
-        getContentPane().setLayout(new java.awt.GridLayout(3, 3, 10, 10));
+        setSize(new java.awt.Dimension(600, 400));
+        getContentPane().setLayout(new java.awt.GridLayout(3, 3));
 
         jButtonChuyenBay.setText("Quản lý chuyến bay");
         getContentPane().add(jButtonChuyenBay);
@@ -52,7 +52,6 @@ public class AdminFrameForm extends javax.swing.JFrame {
 
         jButtonTaiKhoan.setText("Quản lý tài khoản");
         getContentPane().add(jButtonTaiKhoan);
-
         getContentPane().add(jLabelSpace1);
 
         jButtonThoat.setText("Thoát");
@@ -62,11 +61,9 @@ public class AdminFrameForm extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonThoat);
-
         getContentPane().add(jLabelSpace2);
 
         pack();
-        setSize(600, 400);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonThoatActionPerformed
@@ -93,4 +90,3 @@ public class AdminFrameForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSpace2;
     // End of variables declaration//GEN-END:variables
 }
-

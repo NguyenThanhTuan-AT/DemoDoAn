@@ -2,10 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view_code;
+package view_DragDrop;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import model.ChuyenBay;
@@ -16,7 +15,6 @@ import model.QuanLyChung;
  *
  * @author Admin
  */
-
 public class ChuyenBayFrameForm extends javax.swing.JFrame {
 
     private QuanLyChung qlc;
@@ -105,61 +103,21 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tableChuyenBay);
 
+        getContentPane().add(jScrollPane1);
+
         btnThem.setText("Thêm");
-        btnThem.addActionListener(evt -> themChuyenBay());
+        jPanel1.add(btnThem);
 
         btnXoa.setText("Xóa");
-        btnXoa.addActionListener(evt -> xoaChuyenBay());
+        jPanel1.add(btnXoa);
 
         btnGhi.setText("Ghi file");
-        btnGhi.addActionListener(evt -> ChuyenBay.ghiVaoFile("chuyenbay.txt", qlc.getDanhSachChuyenBay()));
+        jPanel1.add(btnGhi);
 
         btnDoc.setText("Đọc file");
-        btnDoc.addActionListener(evt -> {
-            List<ChuyenBay> ds = ChuyenBay.docTuFile("chuyenbay.txt");
-            qlc.getDanhSachChuyenBay().clear();
-            qlc.getDanhSachChuyenBay().addAll(ds);
-            loadData();
-        });
+        jPanel1.add(btnDoc);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnThem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnXoa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnGhi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnDoc)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(btnThem)
-                .addComponent(btnXoa)
-                .addComponent(btnGhi)
-                .addComponent(btnDoc))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(jPanel1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -181,4 +139,3 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
     private javax.swing.JTable tableChuyenBay;
     // End of variables declaration//GEN-END:variables
 }
-
