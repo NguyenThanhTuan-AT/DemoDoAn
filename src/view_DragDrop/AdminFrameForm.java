@@ -13,6 +13,8 @@ public class AdminFrameForm extends javax.swing.JFrame {
     public AdminFrameForm() {
         initComponents();
         setLocationRelativeTo(null); // căn giữa
+
+        setSize(500, 500);
     }
 
     @SuppressWarnings("unchecked")
@@ -51,6 +53,11 @@ public class AdminFrameForm extends javax.swing.JFrame {
         getContentPane().add(jButtonHang);
 
         jButtonTaiKhoan.setText("Quản lý tài khoản");
+        jButtonTaiKhoan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTaiKhoanActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonTaiKhoan);
         getContentPane().add(jLabelSpace1);
 
@@ -69,6 +76,10 @@ public class AdminFrameForm extends javax.swing.JFrame {
     private void jButtonThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonThoatActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButtonThoatActionPerformed
+
+    private void jButtonTaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTaiKhoanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonTaiKhoanActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {

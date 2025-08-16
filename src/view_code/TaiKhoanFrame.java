@@ -64,26 +64,50 @@ public class TaiKhoanFrame extends JFrame {
     }
 
     private void themTaiKhoan() {
-        String ten = JOptionPane.showInputDialog("Tên đăng nhập:");
-        String mk = JOptionPane.showInputDialog("Mật khẩu:");
-        String loai = JOptionPane.showInputDialog("Loại tài khoản (admin/user):");
-
-        if (!loai.equalsIgnoreCase("admin") && !loai.equalsIgnoreCase("user")) {
-            JOptionPane.showMessageDialog(null, "Loại tài khoản không hợp lệ!");
+        String ten = JOptionPane.showInputDialog(this, "Tên đăng nhập:");
+        if (ten == null || ten.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Tên đăng nhập không được để trống!");
             return;
         }
 
-        TaiKhoan tk = new TaiKhoan(ten, mk, loai);
+        String mk = JOptionPane.showInputDialog(this, "Mật khẩu:");
+        if (mk == null || mk.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Mật khẩu không được để trống!");
+            return;
+        }
+
+        String loai = JOptionPane.showInputDialog(this, "Loại tài khoản (admin/user):");
+        TaiKhoan.LoaiTaiKhoan loaiTK;
+
+        if (loai == null) {
+            return;
+        }
+        if (loai.equalsIgnoreCase("admin")) {
+            loaiTK = TaiKhoan.LoaiTaiKhoan.ADMIN;
+        } else if (loai.equalsIgnoreCase("user")) {
+            loaiTK = TaiKhoan.LoaiTaiKhoan.USER;
+        } else {
+            JOptionPane.showMessageDialog(this, "Loại tài khoản không hợp lệ!");
+            return;
+        }
+
+        TaiKhoan tk = new TaiKhoan(ten.trim(), mk.trim(), loaiTK);
         qlc.themTaiKhoan(tk);
         loadData();
+        JOptionPane.showMessageDialog(this, "Thêm tài khoản thành công!");
     }
 
     private void xoaTaiKhoan() {
         int row = table.getSelectedRow();
         if (row >= 0) {
             String ten = (String) model.getValueAt(row, 0);
-            qlc.getDanhSachTaiKhoan().removeIf(tk -> tk.getTenDangNhap().equals(ten));
-            loadData();
+            boolean removed = qlc.getDanhSachTaiKhoan().removeIf(tk -> tk.getTenDangNhap().equals(ten));
+            if (removed) {
+                loadData();
+                JOptionPane.showMessageDialog(this, "Đã xóa tài khoản: " + ten);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn tài khoản để xóa!");
         }
     }
 }

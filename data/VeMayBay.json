@@ -4,7 +4,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB002"
         },
-        "hangVe": "Phổ thông",
+        "hangVe": "PHO_THONG",
         "giaVe": 1600000.0
     },
     {
@@ -12,7 +12,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB003"
         },
-        "hangVe": "Thương gia",
+        "hangVe": "THUONG_GIA",
         "giaVe": 1700000.0
     },
     {
@@ -20,7 +20,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB004"
         },
-        "hangVe": "Phổ thông",
+        "hangVe": "PHO_THONG",
         "giaVe": 1800000.0
     },
     {
@@ -28,7 +28,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB005"
         },
-        "hangVe": "Thương gia",
+        "hangVe": "THUONG_GIA",
         "giaVe": 1900000.0
     },
     {
@@ -36,7 +36,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB006"
         },
-        "hangVe": "Phổ thông",
+        "hangVe": "PHO_THONG",
         "giaVe": 2000000.0
     },
     {
@@ -44,7 +44,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB007"
         },
-        "hangVe": "Thương gia",
+        "hangVe": "THUONG_GIA",
         "giaVe": 2100000.0
     },
     {
@@ -52,7 +52,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB008"
         },
-        "hangVe": "Phổ thông",
+        "hangVe": "PHO_THONG",
         "giaVe": 2200000.0
     },
     {
@@ -60,7 +60,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB009"
         },
-        "hangVe": "Thương gia",
+        "hangVe": "THUONG_GIA",
         "giaVe": 2300000.0
     },
     {
@@ -68,7 +68,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB010"
         },
-        "hangVe": "Phổ thông",
+        "hangVe": "PHO_THONG",
         "giaVe": 2400000.0
     },
     {
@@ -76,7 +76,7 @@
         "chuyenBay": {
             "soHieuChuyenBay": "CB001"
         },
-        "hangVe": "Thương gia",
+        "hangVe": "THUONG_GIA",
         "giaVe": 2500000.0
     }
 ]

@@ -5,15 +5,20 @@ import util.FileIOUtil;
 
 public class VeMayBay {
 
+    public enum HangVe {
+        PHO_THONG,
+        THUONG_GIA
+    }
+
     private String maVe;
     private ChuyenBay chuyenBay;
-    private String hangVe;
+    private HangVe hangVe;
     private double giaVe;
 
     public VeMayBay() {
     }
 
-    public VeMayBay(String maVe, ChuyenBay chuyenBay, String hangVe, double giaVe) {
+    public VeMayBay(String maVe, ChuyenBay chuyenBay, HangVe hangVe, double giaVe) {
         this.maVe = maVe;
         this.chuyenBay = chuyenBay;
         this.hangVe = hangVe;
@@ -36,11 +41,11 @@ public class VeMayBay {
         this.chuyenBay = chuyenBay;
     }
 
-    public String getHangVe() {
+    public HangVe getHangVe() {
         return hangVe;
     }
 
-    public void setHangVe(String hangVe) {
+    public void setHangVe(HangVe hangVe) {
         this.hangVe = hangVe;
     }
 
@@ -49,12 +54,32 @@ public class VeMayBay {
     }
 
     public void setGiaVe(double giaVe) {
+        if (giaVe < 0) {
+            throw new IllegalArgumentException("Giá vé không được âm");
+        }
         this.giaVe = giaVe;
+    }
+
+    public boolean laThuongGia() {
+        return hangVe == HangVe.THUONG_GIA;
+    }
+
+    public boolean laPhoThong() {
+        return hangVe == HangVe.PHO_THONG;
+    }
+
+    public double tinhGiaSauThue(double thue) {
+        return giaVe * (1 + thue);
     }
 
     @Override
     public String toString() {
-        return "VeMayBay{" + "maVe='" + maVe + "', chuyenBay=" + chuyenBay + ", hangVe='" + hangVe + "', giaVe=" + giaVe + '}';
+        return "VeMayBay{"
+                + "maVe='" + maVe + '\''
+                + ", chuyenBay=" + chuyenBay
+                + ", hangVe=" + hangVe
+                + ", giaVe=" + giaVe
+                + '}';
     }
 
     public static List<VeMayBay> docTuFile(String tenFile) {
@@ -64,5 +89,4 @@ public class VeMayBay {
     public static void ghiVaoFile(String tenFile, List<VeMayBay> danhSach) {
         FileIOUtil.ghiVaoFile(tenFile, danhSach);
     }
-
 }

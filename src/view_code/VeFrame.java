@@ -7,6 +7,7 @@ import javax.swing.table.DefaultTableModel;
 import model.ChuyenBay;
 import model.QuanLyChung;
 import model.VeMayBay;
+import model.VeMayBay.HangVe;
 
 public class VeFrame extends JFrame {
 
@@ -76,12 +77,27 @@ public class VeFrame extends JFrame {
             return;
         }
 
-        String hangVe = JOptionPane.showInputDialog("Hạng vé (phổ thông/thương gia):");
-        double giaVe = Double.parseDouble(JOptionPane.showInputDialog("Giá vé:"));
+        String input = JOptionPane.showInputDialog("Hạng vé (phổ thông/thương gia):");
+        HangVe hangVe = null;
 
-        VeMayBay ve = new VeMayBay(maVe, cb, hangVe, giaVe);
-        qlc.themVe(ve);
-        loadData();
+        if (input != null) {
+            switch (input.trim().toLowerCase()) {
+                case "phổ thông":
+                    hangVe = HangVe.PHO_THONG;
+                    break;
+                case "thương gia":
+                    hangVe = HangVe.THUONG_GIA;
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Hạng vé không hợp lệ!");
+                    return;
+            }
+            double giaVe = Double.parseDouble(JOptionPane.showInputDialog("Giá vé:"));
+
+            VeMayBay ve = new VeMayBay(maVe, cb, hangVe, giaVe);
+            qlc.themVe(ve);
+            loadData();
+        }
     }
 
     private void xoaVe() {

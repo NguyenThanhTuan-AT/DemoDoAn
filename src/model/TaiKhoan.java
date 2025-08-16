@@ -5,14 +5,23 @@ import util.FileIOUtil;
 
 public class TaiKhoan {
 
+    public enum LoaiTaiKhoan {
+        ADMIN,
+        USER
+    }
+
     private String tenDangNhap;
     private String matKhau;
-    private String loaiTaiKhoan; // admin or user
+    private LoaiTaiKhoan loaiTaiKhoan;
 
     public TaiKhoan() {
     }
 
-    public TaiKhoan(String tenDangNhap, String matKhau, String loaiTaiKhoan) {
+    public TaiKhoan(String tenDangNhap, String matKhau, LoaiTaiKhoan loaiTaiKhoan) {
+//Chưa cần thiết
+//        if (matKhau == null || matKhau.length() < 6) {
+//            throw new IllegalArgumentException("Mật khẩu phải có ít nhất 6 ký tự");
+//        }
         this.tenDangNhap = tenDangNhap;
         this.matKhau = matKhau;
         this.loaiTaiKhoan = loaiTaiKhoan;
@@ -31,28 +40,39 @@ public class TaiKhoan {
     }
 
     public void setMatKhau(String matKhau) {
+//        Chưa cần thiết
+//        if (matKhau == null || matKhau.length() < 6) {
+//            throw new IllegalArgumentException("Mật khẩu phải có ít nhất 6 ký tự");
+//        }
         this.matKhau = matKhau;
     }
 
-    public String getLoaiTaiKhoan() {
+    public LoaiTaiKhoan getLoaiTaiKhoan() {
         return loaiTaiKhoan;
     }
 
-    public void setLoaiTaiKhoan(String loaiTaiKhoan) {
+    public void setLoaiTaiKhoan(LoaiTaiKhoan loaiTaiKhoan) {
         this.loaiTaiKhoan = loaiTaiKhoan;
     }
 
     public boolean laAdmin() {
-        return "admin".equalsIgnoreCase(loaiTaiKhoan);
+        return loaiTaiKhoan == LoaiTaiKhoan.ADMIN;
     }
 
     public boolean kiemTraMatKhau(String matKhauNhapVao) {
         return this.matKhau.equals(matKhauNhapVao);
     }
 
+    public void doiMatKhau(String matKhauMoi) {
+        setMatKhau(matKhauMoi);
+    }
+
     @Override
     public String toString() {
-        return "TaiKhoan{" + "tenDangNhap='" + tenDangNhap + "', loaiTaiKhoan='" + loaiTaiKhoan + "'}";
+        return "TaiKhoan{"
+                + "tenDangNhap='" + tenDangNhap + '\''
+                + ", loaiTaiKhoan=" + loaiTaiKhoan
+                + '}';
     }
 
     public static List<TaiKhoan> docTuFile(String tenFile) {
@@ -62,5 +82,4 @@ public class TaiKhoan {
     public static void ghiVaoFile(String tenFile, List<TaiKhoan> danhSach) {
         FileIOUtil.ghiVaoFile(tenFile, danhSach);
     }
-
 }
