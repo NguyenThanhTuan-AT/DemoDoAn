@@ -23,6 +23,9 @@ public class HanhKhach {
     }
 
     public void setCccd(String cccd) {
+        if (cccd == null || !cccd.matches("\\\\d{12}")) {
+            throw new IllegalArgumentException("CCCD phải gồm 12 chữ số");
+        }
         this.cccd = cccd;
     }
 

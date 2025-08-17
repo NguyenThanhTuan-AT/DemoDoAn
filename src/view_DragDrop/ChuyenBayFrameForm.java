@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package view_DragDrop;
 
 import java.time.LocalDateTime;
@@ -11,10 +7,6 @@ import model.ChuyenBay;
 import model.MayBay;
 import model.QuanLyChung;
 
-/**
- *
- * @author Admin
- */
 public class ChuyenBayFrameForm extends javax.swing.JFrame {
 
     private QuanLyChung qlc;
@@ -25,6 +17,7 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Quản lý chuyến bay");
+        setSize(500, 500);
         model = (DefaultTableModel) tableChuyenBay.getModel();
         loadData();
     }

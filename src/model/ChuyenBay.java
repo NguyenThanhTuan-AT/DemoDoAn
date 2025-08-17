@@ -2,6 +2,7 @@ package model;
 
 import java.time.LocalDateTime;
 import java.util.*;
+import model.VeMayBay.HangVe;
 import util.FileIOUtil;
 
 public class ChuyenBay {
@@ -76,6 +77,9 @@ public class ChuyenBay {
     }
 
     public void setThoiGianDen(LocalDateTime thoiGianDen) {
+        if (thoiGianDi != null && thoiGianDen.isBefore(thoiGianDi)) {
+            throw new IllegalArgumentException("Thời gian đến phải sau thời gian đi");
+        }
         this.thoiGianDen = thoiGianDen;
     }
 
@@ -100,7 +104,24 @@ public class ChuyenBay {
     }
 
     public void setSoVeDaBan(int soVeDaBan) {
+        int tongCho = soPhoThong + soThuongGia;
+        if (soVeDaBan > tongCho) {
+            throw new IllegalArgumentException("Số vé đã bán vượt quá số chỗ");
+        }
         this.soVeDaBan = soVeDaBan;
+    }
+
+    public boolean conChoTrong(HangVe hangVe) {
+        int daBan = this.soVeDaBan;
+        if (hangVe == HangVe.THUONG_GIA) {
+            return daBan < soThuongGia;
+        } else {
+            return daBan < soPhoThong;
+        }
+    }
+
+    public int tongSoCho() {
+        return soThuongGia + soPhoThong;
     }
 
     @Override

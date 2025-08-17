@@ -2,51 +2,51 @@
     {
         "tenDangNhap": "admin",
         "matKhau": "1",
-        "loaiTaiKhoan": "admin"
+        "loaiTaiKhoan": "ADMIN"
     },
     {
         "tenDangNhap": "user",
         "matKhau": "1",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user3",
         "matKhau": "pass3",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user4",
         "matKhau": "pass4",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user5",
         "matKhau": "pass5",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user6",
         "matKhau": "pass6",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user7",
         "matKhau": "pass7",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user8",
         "matKhau": "pass8",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user9",
         "matKhau": "pass9",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     },
     {
         "tenDangNhap": "user10",
         "matKhau": "pass10",
-        "loaiTaiKhoan": "user"
+        "loaiTaiKhoan": "USER"
     }
 ]
