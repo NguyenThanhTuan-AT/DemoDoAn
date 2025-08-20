@@ -8,6 +8,7 @@ import java.lang.reflect.Type;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 public class FileIOUtil {
 
@@ -35,4 +36,22 @@ public class FileIOUtil {
             e.printStackTrace();
         }
     }
+
+    public static <T> void suaDoiTuong(String tenFile, T doiTuongMoi, Function<T, String> layId) {
+        List<T> danhSach = docTuFile(tenFile, (Class<T>) doiTuongMoi.getClass());
+        for (int i = 0; i < danhSach.size(); i++) {
+            if (layId.apply(danhSach.get(i)).equals(layId.apply(doiTuongMoi))) {
+                danhSach.set(i, doiTuongMoi);
+                break;
+            }
+        }
+        ghiVaoFile(tenFile, danhSach);
+    }
+
+    public static <T> void xoaDoiTuong(String tenFile, String id, Function<T, String> layId, Class<T> clazz) {
+        List<T> danhSach = docTuFile(tenFile, clazz);
+        danhSach.removeIf(obj -> layId.apply(obj).equals(id));
+        ghiVaoFile(tenFile, danhSach);
+    }
+
 }

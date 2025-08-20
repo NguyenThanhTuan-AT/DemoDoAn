@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import model.VeMayBay.HangVe;
+import util.FileIOUtil;
 
 public class QuanLyChung {
 
@@ -35,13 +36,15 @@ public class QuanLyChung {
         if (mb != null) {
             HangHangKhong hang = timHang(mb.getMaHang());
             if (hang != null) {
-                hang.themChuyenBay(cb); // cập nhật liên kết ngược
+                hang.themChuyenBay(cb);
             }
         }
+        FileIOUtil.ghiVaoFile("chuyenbay.json", danhSachChuyenBay);
     }
 
     public void xoaChuyenBay(String soHieu) {
         danhSachChuyenBay.removeIf(cb -> cb.getSoHieuChuyenBay().equals(soHieu));
+        FileIOUtil.ghiVaoFile("chuyenbay.json", danhSachChuyenBay);
     }
 
     public ChuyenBay timChuyenBay(String soHieu) {
@@ -91,12 +94,14 @@ public class QuanLyChung {
         danhSachVe.add(ve);
         ChuyenBay cb = ve.getChuyenBay();
         if (cb != null) {
-            cb.themVe(ve); // cập nhật liên kết ngược
+            cb.themVe(ve);
         }
+        FileIOUtil.ghiVaoFile("ve.json", danhSachVe);
     }
 
     public void xoaVe(String maVe) {
         danhSachVe.removeIf(ve -> ve.getMaVe().equals(maVe));
+        FileIOUtil.ghiVaoFile("ve.json", danhSachVe);
     }
 
     public VeMayBay timVe(String maVe) {
@@ -133,6 +138,12 @@ public class QuanLyChung {
     // === Quản lý hành khách ===
     public void themHanhKhach(HanhKhach hk) {
         danhSachHanhKhach.add(hk);
+        FileIOUtil.ghiVaoFile("hanhkhach.json", danhSachHanhKhach);
+    }
+
+    public void xoaHanhKhach(String cccd) {
+        danhSachHanhKhach.removeIf(hk -> hk.getCccd().equals(cccd));
+        FileIOUtil.ghiVaoFile("hanhkhach.json", danhSachHanhKhach);
     }
 
     public HanhKhach timHanhKhach(String cccd) {
@@ -155,6 +166,12 @@ public class QuanLyChung {
     // === Quản lý hãng hàng không ===
     public void themHang(HangHangKhong hhk) {
         danhSachHang.add(hhk);
+        FileIOUtil.ghiVaoFile("hang.json", danhSachHang);
+    }
+
+    public void xoaHang(String maHang) {
+        danhSachHang.removeIf(hhk -> hhk.getMaHang().equals(maHang));
+        FileIOUtil.ghiVaoFile("hang.json", danhSachHang);
     }
 
     public HangHangKhong timHang(String maHang) {
@@ -169,6 +186,12 @@ public class QuanLyChung {
     // === Quản lý máy bay ===
     public void themMayBay(MayBay mb) {
         danhSachMayBay.add(mb);
+        FileIOUtil.ghiVaoFile("maybay.json", danhSachMayBay);
+    }
+
+    public void xoaMayBay(String soHieu) {
+        danhSachMayBay.removeIf(mb -> mb.getSoHieuMayBay().equals(soHieu));
+        FileIOUtil.ghiVaoFile("maybay.json", danhSachMayBay);
     }
 
     public MayBay timMayBay(String soHieu) {
@@ -183,6 +206,12 @@ public class QuanLyChung {
     // === Quản lý tài khoản ===
     public void themTaiKhoan(TaiKhoan tk) {
         danhSachTaiKhoan.add(tk);
+        FileIOUtil.ghiVaoFile("taikhoan.json", danhSachTaiKhoan);
+    }
+
+    public void xoaTaiKhoan(String tenDangNhap) {
+        danhSachTaiKhoan.removeIf(tk -> tk.getTenDangNhap().equals(tenDangNhap));
+        FileIOUtil.ghiVaoFile("taikhoan.json", danhSachTaiKhoan);
     }
 
     public TaiKhoan timTaiKhoan(String tenDangNhap) {
