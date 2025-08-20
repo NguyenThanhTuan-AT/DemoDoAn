@@ -16,6 +16,15 @@ public class ChuyenBay {
     private int soThuongGia;
     private int soPhoThong;
     private int soVeDaBan;
+    private List<VeMayBay> danhSachVe = new ArrayList<>();
+
+    public void themVe(VeMayBay ve) {
+        danhSachVe.add(ve);
+    }
+
+    public List<VeMayBay> getDanhSachVe() {
+        return danhSachVe;
+    }
 
     public ChuyenBay() {
     }

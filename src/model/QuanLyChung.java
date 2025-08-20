@@ -1,9 +1,14 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+import model.VeMayBay.HangVe;
 
 public class QuanLyChung {
 
@@ -26,6 +31,13 @@ public class QuanLyChung {
     // === Quản lý chuyến bay ===
     public void themChuyenBay(ChuyenBay cb) {
         danhSachChuyenBay.add(cb);
+        MayBay mb = cb.getMayBay();
+        if (mb != null) {
+            HangHangKhong hang = timHang(mb.getMaHang());
+            if (hang != null) {
+                hang.themChuyenBay(cb); // cập nhật liên kết ngược
+            }
+        }
     }
 
     public void xoaChuyenBay(String soHieu) {
@@ -53,9 +65,34 @@ public class QuanLyChung {
                 .collect(Collectors.toList());
     }
 
+    public List<ChuyenBay> locChuyenBayConTrongTheoNgay(LocalDate ngay) {
+        return danhSachChuyenBay.stream()
+                .filter(cb -> cb.getThoiGianDi() != null
+                && cb.getThoiGianDi().toLocalDate().equals(ngay)
+                && cb.getSoVeDaBan() < (cb.getSoPhoThong() + cb.getSoThuongGia()))
+                .collect(Collectors.toList());
+    }
+
+    public List<ChuyenBay> locChuyenBayConTrongTheoKhoangGio(LocalDate ngay, int gioBatDau, int gioKetThuc) {
+        return danhSachChuyenBay.stream()
+                .filter(cb -> {
+                    LocalDateTime tgDi = cb.getThoiGianDi();
+                    return tgDi != null
+                            && tgDi.toLocalDate().equals(ngay)
+                            && tgDi.getHour() >= gioBatDau
+                            && tgDi.getHour() <= gioKetThuc
+                            && cb.getSoVeDaBan() < (cb.getSoPhoThong() + cb.getSoThuongGia());
+                })
+                .collect(Collectors.toList());
+    }
+
     // === Quản lý vé ===
     public void themVe(VeMayBay ve) {
         danhSachVe.add(ve);
+        ChuyenBay cb = ve.getChuyenBay();
+        if (cb != null) {
+            cb.themVe(ve); // cập nhật liên kết ngược
+        }
     }
 
     public void xoaVe(String maVe) {
@@ -185,6 +222,59 @@ public class QuanLyChung {
 
     public List<TaiKhoan> getDanhSachTaiKhoan() {
         return danhSachTaiKhoan;
+    }
+
+    //Sắp xếp
+    public void sapXepHanhKhachTheoTen() {
+        danhSachHanhKhach.sort(Comparator.comparing(HanhKhach::getHoTen));
+    }
+
+    public void sapXepChuyenBayTheoMa() {
+        danhSachChuyenBay.sort(Comparator.comparing(ChuyenBay::getSoHieuChuyenBay));
+    }
+
+    public void sapXepHangHangKhongTheoTen() {
+        danhSachHang.sort(Comparator.comparing(HangHangKhong::getTenHang));
+    }
+
+    public void sapXepVeTheoMa() {
+        danhSachVe.sort(Comparator.comparing(VeMayBay::getMaVe));
+    }
+
+    public List<String> goiYMaChuyenBay(String tuKhoa) {
+        return danhSachChuyenBay.stream()
+                .map(ChuyenBay::getSoHieuChuyenBay)
+                .filter(ma -> ma.toLowerCase().contains(tuKhoa.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    public List<String> goiYTenHangHangKhong(String tuKhoa) {
+        return danhSachHang.stream()
+                .map(HangHangKhong::getTenHang)
+                .filter(ten -> ten.toLowerCase().contains(tuKhoa.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    public Map<String, Map<String, Integer>> thongKeSoVeConLaiTheoNgay(LocalDate ngay) {
+        Map<String, Map<String, Integer>> ketQua = new HashMap<>();
+        for (ChuyenBay cb : danhSachChuyenBay) {
+            if (cb.getThoiGianDi() != null && cb.getThoiGianDi().toLocalDate().equals(ngay)) {
+                int phoThongCon = cb.getSoPhoThong() - demVe(cb, HangVe.PHO_THONG);
+                int thuongGiaCon = cb.getSoThuongGia() - demVe(cb, HangVe.THUONG_GIA);
+                Map<String, Integer> thongTin = new HashMap<>();
+                thongTin.put("PHO_THONG", phoThongCon);
+                thongTin.put("THUONG_GIA", thuongGiaCon);
+                ketQua.put(cb.getSoHieuChuyenBay(), thongTin);
+            }
+        }
+        return ketQua;
+    }
+
+    private int demVe(ChuyenBay cb, HangVe hangVe) {
+
+        return (int) danhSachVe.stream()
+                .filter(ve -> ve.getChuyenBay().equals(cb) && ve.getHangVe() == hangVe).count();
+
     }
 
     @Override

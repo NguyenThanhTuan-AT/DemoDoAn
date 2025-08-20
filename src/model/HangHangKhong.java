@@ -9,6 +9,15 @@ public class HangHangKhong {
     private String maHang;
     private String tenHang;
     private List<MayBay> danhSachMayBay;
+    private List<ChuyenBay> danhSachChuyenBay = new ArrayList<>();
+
+    public void themChuyenBay(ChuyenBay cb) {
+        danhSachChuyenBay.add(cb);
+    }
+
+    public List<ChuyenBay> getDanhSachChuyenBay() {
+        return danhSachChuyenBay;
+    }
 
     public HangHangKhong() {
         danhSachMayBay = new ArrayList<>();
