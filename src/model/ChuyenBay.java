@@ -133,6 +133,15 @@ public class ChuyenBay {
         return soThuongGia + soPhoThong;
     }
 
+    public void capNhatThongTin(ChuyenBay moi) {
+        this.diemDi = moi.getDiemDi();
+        this.diemDen = moi.getDiemDen();
+        this.thoiGianDi = moi.getThoiGianDi();
+        this.thoiGianDen = moi.getThoiGianDen();
+        this.soPhoThong = moi.getSoPhoThong();
+        this.soThuongGia = moi.getSoThuongGia();
+    }
+
     @Override
     public String toString() {
         return "ChuyenBay{" + "soHieuChuyenBay='" + soHieuChuyenBay + "', mayBay="

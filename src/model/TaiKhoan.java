@@ -67,6 +67,11 @@ public class TaiKhoan {
         setMatKhau(matKhauMoi);
     }
 
+    public void capNhatThongTin(TaiKhoan moi) {
+        this.matKhau = moi.getMatKhau();
+        this.loaiTaiKhoan = moi.getLoaiTaiKhoan();
+    }
+
     @Override
     public String toString() {
         return "TaiKhoan{"

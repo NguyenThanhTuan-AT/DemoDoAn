@@ -72,6 +72,12 @@ public class VeMayBay {
         return giaVe * (1 + thue);
     }
 
+    public void capNhatThongTin(VeMayBay moi) {
+        this.chuyenBay = moi.getChuyenBay();
+        this.hangVe = moi.getHangVe();
+        this.giaVe = moi.getGiaVe();
+    }
+
     @Override
     public String toString() {
         return "VeMayBay{"

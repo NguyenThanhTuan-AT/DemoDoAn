@@ -2,7 +2,6 @@ package model;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -21,12 +20,12 @@ public class QuanLyChung {
     private List<TaiKhoan> danhSachTaiKhoan;
 
     public QuanLyChung() {
-        danhSachChuyenBay = new ArrayList<>();
-        danhSachVe = new ArrayList<>();
-        danhSachHanhKhach = new ArrayList<>();
-        danhSachHang = new ArrayList<>();
-        danhSachMayBay = new ArrayList<>();
-        danhSachTaiKhoan = new ArrayList<>();
+        danhSachChuyenBay = FileIOUtil.docTuFile("chuyenbay.json", ChuyenBay.class);
+        danhSachVe = FileIOUtil.docTuFile("ve.json", VeMayBay.class);
+        danhSachHanhKhach = FileIOUtil.docTuFile("hanhkhach.json", HanhKhach.class);
+        danhSachHang = FileIOUtil.docTuFile("hang.json", HangHangKhong.class);
+        danhSachMayBay = FileIOUtil.docTuFile("maybay.json", MayBay.class);
+        danhSachTaiKhoan = FileIOUtil.docTuFile("taikhoan.json", TaiKhoan.class);
     }
 
     // === Quản lý chuyến bay ===

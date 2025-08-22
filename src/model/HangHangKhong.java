@@ -53,6 +53,10 @@ public class HangHangKhong {
         danhSachMayBay.add(mb);
     }
 
+    public void capNhatThongTin(HangHangKhong moi) {
+        this.tenHang = moi.getTenHang();
+    }
+
     @Override
     public String toString() {
         return "HangHangKhong{" + "maHang='" + maHang + "', tenHang='" + tenHang + "', danhSachMayBay=" + danhSachMayBay + '}';

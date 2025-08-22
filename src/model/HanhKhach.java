@@ -45,6 +45,11 @@ public class HanhKhach {
         this.ve = ve;
     }
 
+    public void capNhatThongTin(HanhKhach moi) {
+        this.hoTen = moi.getHoTen();
+        this.ve = moi.getVe();
+    }
+
     @Override
     public String toString() {
         return "HanhKhach{" + "cccd='" + cccd + "', hoTen='" + hoTen + "', ve=" + ve + '}';

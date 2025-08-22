@@ -32,6 +32,10 @@ public class MayBay {
         this.maHang = maHang;
     }
 
+    public void capNhatThongTin(MayBay moi) {
+        this.maHang = moi.getMaHang();
+    }
+
     @Override
     public String toString() {
         return "MayBay{" + "soHieuMayBay='" + soHieuMayBay + "', maHang='" + maHang + "'}";
