@@ -4,9 +4,11 @@
  */
 package view_DragDrop;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
+import model.MayBay;
 import model.QuanLyChung;
 
 /**
@@ -27,6 +29,34 @@ public class MayBayFrameForm extends javax.swing.JFrame {
         setSize(600, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        loadData();
+    }
+
+    private void loadData() {
+        model.setRowCount(0);
+        for (MayBay mb : qlc.getDanhSachMayBay()) {
+            model.addRow(new Object[]{
+                mb.getSoHieuMayBay(),
+                mb.getMaHang()
+            });
+        }
+    }
+
+    private void themMayBay() {
+        String soHieu = JOptionPane.showInputDialog("Số hiệu máy bay:");
+        String maHang = JOptionPane.showInputDialog("Mã hãng hàng không:");
+        MayBay mb = new MayBay(soHieu, maHang);
+        qlc.themMayBay(mb);
+        loadData();
+    }
+
+    private void xoaMayBay() {
+        int row = table.getSelectedRow();
+        if (row >= 0) {
+            String soHieu = (String) model.getValueAt(row, 0);
+            qlc.getDanhSachMayBay().removeIf(mb -> mb.getSoHieuMayBay().equals(soHieu));
+            loadData();
+        }
     }
 
     /**
@@ -41,10 +71,10 @@ public class MayBayFrameForm extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnThem = new javax.swing.JButton();
+        btnXoa = new javax.swing.JButton();
+        btnGhi = new javax.swing.JButton();
+        btnDoc = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,17 +93,17 @@ public class MayBayFrameForm extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        jButton1.setText("Thêm");
-        jPanel1.add(jButton1);
+        btnThem.setText("Thêm");
+        jPanel1.add(btnThem);
 
-        jButton2.setText("Xóa");
-        jPanel1.add(jButton2);
+        btnXoa.setText("Xóa");
+        jPanel1.add(btnXoa);
 
-        jButton3.setText("Ghi file");
-        jPanel1.add(jButton3);
+        btnGhi.setText("Ghi file");
+        jPanel1.add(btnGhi);
 
-        jButton4.setText("Đọc file");
-        jPanel1.add(jButton4);
+        btnDoc.setText("Đọc file");
+        jPanel1.add(btnDoc);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_END);
 
@@ -117,10 +147,10 @@ public class MayBayFrameForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnDoc;
+    private javax.swing.JButton btnGhi;
+    private javax.swing.JButton btnThem;
+    private javax.swing.JButton btnXoa;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table;

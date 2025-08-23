@@ -21,14 +21,14 @@ public class AdminFrameForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonChuyenBay = new javax.swing.JButton();
-        jButtonVe = new javax.swing.JButton();
-        jButtonHanhKhach = new javax.swing.JButton();
-        jButtonMayBay = new javax.swing.JButton();
-        jButtonHang = new javax.swing.JButton();
-        jButtonTaiKhoan = new javax.swing.JButton();
+        btnChuyenBay = new javax.swing.JButton();
+        btnVe = new javax.swing.JButton();
+        btnHanhKhach = new javax.swing.JButton();
+        btnMayBay = new javax.swing.JButton();
+        btnHang = new javax.swing.JButton();
+        btnTaiKhoan = new javax.swing.JButton();
         jLabelSpace1 = new javax.swing.JLabel();
-        jButtonThoat = new javax.swing.JButton();
+        btnThoat = new javax.swing.JButton();
         jLabelSpace2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,49 +37,49 @@ public class AdminFrameForm extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(600, 400));
         getContentPane().setLayout(new java.awt.GridLayout(3, 3));
 
-        jButtonChuyenBay.setText("Quản lý chuyến bay");
-        getContentPane().add(jButtonChuyenBay);
+        btnChuyenBay.setText("Quản lý chuyến bay");
+        getContentPane().add(btnChuyenBay);
 
-        jButtonVe.setText("Quản lý vé");
-        getContentPane().add(jButtonVe);
+        btnVe.setText("Quản lý vé");
+        getContentPane().add(btnVe);
 
-        jButtonHanhKhach.setText("Quản lý hành khách");
-        getContentPane().add(jButtonHanhKhach);
+        btnHanhKhach.setText("Quản lý hành khách");
+        getContentPane().add(btnHanhKhach);
 
-        jButtonMayBay.setText("Quản lý máy bay");
-        getContentPane().add(jButtonMayBay);
+        btnMayBay.setText("Quản lý máy bay");
+        getContentPane().add(btnMayBay);
 
-        jButtonHang.setText("Quản lý hãng hàng không");
-        getContentPane().add(jButtonHang);
+        btnHang.setText("Quản lý hãng hàng không");
+        getContentPane().add(btnHang);
 
-        jButtonTaiKhoan.setText("Quản lý tài khoản");
-        jButtonTaiKhoan.addActionListener(new java.awt.event.ActionListener() {
+        btnTaiKhoan.setText("Quản lý tài khoản");
+        btnTaiKhoan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonTaiKhoanActionPerformed(evt);
+                btnTaiKhoanActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonTaiKhoan);
+        getContentPane().add(btnTaiKhoan);
         getContentPane().add(jLabelSpace1);
 
-        jButtonThoat.setText("Thoát");
-        jButtonThoat.addActionListener(new java.awt.event.ActionListener() {
+        btnThoat.setText("Thoát");
+        btnThoat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonThoatActionPerformed(evt);
+                btnThoatActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonThoat);
+        getContentPane().add(btnThoat);
         getContentPane().add(jLabelSpace2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonThoatActionPerformed
+    private void btnThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThoatActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButtonThoatActionPerformed
+    }//GEN-LAST:event_btnThoatActionPerformed
 
-    private void jButtonTaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTaiKhoanActionPerformed
+    private void btnTaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaiKhoanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonTaiKhoanActionPerformed
+    }//GEN-LAST:event_btnTaiKhoanActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -90,13 +90,13 @@ public class AdminFrameForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonChuyenBay;
-    private javax.swing.JButton jButtonHang;
-    private javax.swing.JButton jButtonHanhKhach;
-    private javax.swing.JButton jButtonMayBay;
-    private javax.swing.JButton jButtonTaiKhoan;
-    private javax.swing.JButton jButtonThoat;
-    private javax.swing.JButton jButtonVe;
+    private javax.swing.JButton btnChuyenBay;
+    private javax.swing.JButton btnHang;
+    private javax.swing.JButton btnHanhKhach;
+    private javax.swing.JButton btnMayBay;
+    private javax.swing.JButton btnTaiKhoan;
+    private javax.swing.JButton btnThoat;
+    private javax.swing.JButton btnVe;
     private javax.swing.JLabel jLabelSpace1;
     private javax.swing.JLabel jLabelSpace2;
     // End of variables declaration//GEN-END:variables

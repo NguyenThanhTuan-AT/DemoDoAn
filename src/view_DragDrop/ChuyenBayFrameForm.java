@@ -18,7 +18,7 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setTitle("Quản lý chuyến bay");
         setSize(500, 500);
-        model = (DefaultTableModel) tableChuyenBay.getModel();
+        model = (DefaultTableModel) table.getModel();
         loadData();
     }
 
@@ -62,7 +62,7 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
     }
 
     private void xoaChuyenBay() {
-        int row = tableChuyenBay.getSelectedRow();
+        int row = table.getSelectedRow();
         if (row >= 0) {
             String soHieu = (String) model.getValueAt(row, 0);
             qlc.xoaChuyenBay(soHieu);
@@ -77,7 +77,7 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableChuyenBay = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         btnThem = new javax.swing.JButton();
         btnXoa = new javax.swing.JButton();
@@ -86,7 +86,7 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        tableChuyenBay.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -94,7 +94,7 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
                 "Số hiệu", "Máy bay", "Điểm đi", "Điểm đến", "Giờ đi", "Giờ đến", "TG", "PT", "Đã bán"
             }
         ));
-        jScrollPane1.setViewportView(tableChuyenBay);
+        jScrollPane1.setViewportView(table);
 
         getContentPane().add(jScrollPane1);
 
@@ -129,6 +129,6 @@ public class ChuyenBayFrameForm extends javax.swing.JFrame {
     private javax.swing.JButton btnXoa;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tableChuyenBay;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }
